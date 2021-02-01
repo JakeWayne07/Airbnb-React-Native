@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
 
     locationText : {
         fontSize: 16,
-        fontWeight: '700'
     }
 })
 
