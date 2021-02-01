@@ -13,13 +13,15 @@ import {
 } from 'react-native';
 
 import HomeScreen from './src/screens/Home'
+import Accommodation from './src/components/Accommodation'
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <HomeScreen/>
+        <Accommodation/>
+        <Accommodation/>
       </SafeAreaView>
     </>
   );
