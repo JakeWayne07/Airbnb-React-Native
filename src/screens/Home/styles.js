@@ -39,7 +39,7 @@ const styles  = StyleSheet.create({
         justifyContent: 'center',
         elevation: (Platform.OS === 'android') ? 50 : 0,
         backgroundColor: 'white',
-        paddingVertical: 10,
+        paddingVertical: 15,
         borderRadius: 20,
         marginHorizontal: 10
     },
