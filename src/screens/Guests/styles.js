@@ -1,6 +1,11 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+    container : {
+        height: '100%',
+        justifyContent: "space-between"
+    },
+
     row:{
         flexDirection: 'row',
         alignItems: 'center',
@@ -37,6 +42,22 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 15,
         borderColor: '#b8b8b8'
+    },
+
+    searchButton:{
+        backgroundColor: '#f15454',
+        width: Dimensions.get('window').width -20,
+        paddingVertical: 20,
+        marginBottom: 10,
+        marginHorizontal: 10,
+        borderRadius: 10,
+        alignItems: 'center'
+    },
+
+    searchButtonText: {
+        color: 'white',
+        fontWeight: '700',
+        fontSize: 20
     }
 })
 
