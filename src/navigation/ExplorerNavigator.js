@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import SearchResultScreen from '../screens/SearchResult'
 import HomeScreen from '../screens/Home'
 import SearchResultsTabNavigator from './SearchResultsTabNavigator'
+import MapScreen from '../screens/Map'
 
 const Stack = createStackNavigator()
 
@@ -11,7 +12,7 @@ const Router = () => {
         <Stack.Navigator>
             <Stack.Screen
                 name={"Home"}
-                component={HomeScreen}
+                component={MapScreen}
                 options={{
                     headerShown: false
                 }}

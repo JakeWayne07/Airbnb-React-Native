@@ -57,3 +57,7 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+#keys
+.env
+/android/app/src/main/res/values/key.xml
