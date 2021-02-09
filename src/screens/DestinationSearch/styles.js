@@ -6,8 +6,9 @@ const styles = StyleSheet.create({
     },
 
     textInput : {
-        fontSize: 16,
-        marginBottom:10
+        fontSize: 20,
+        marginBottom: 20,
+        marginTop: 50
     },
 
     row : {
@@ -27,6 +28,11 @@ const styles = StyleSheet.create({
 
     locationText : {
         fontSize: 16,
+    },
+
+    placeIcon:{
+        height: 25,
+        width: 25
     }
 })
 
