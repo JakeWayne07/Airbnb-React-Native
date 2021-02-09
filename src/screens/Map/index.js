@@ -4,6 +4,7 @@ import styles from './styles'
 import MapView, { PROVIDER_GOOGLE} from 'react-native-maps';
 import CustomMarker from "../../components/CustomMarker";
 import places from '../../assets/data/feed';
+import CarouselItem from '../../components/CarouselItem';
 
 const MapScreen = () => {
 
@@ -31,6 +32,11 @@ const MapScreen = () => {
                         )
                     )}
             </MapView>
+            <View style={{position: 'absolute', bottom: 10}}>
+                <CarouselItem
+                    post={places[0]}
+                />
+            </View>
         </View>
     )
 }
