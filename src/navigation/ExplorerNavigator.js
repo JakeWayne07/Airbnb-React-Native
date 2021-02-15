@@ -4,6 +4,7 @@ import SearchResultScreen from '../screens/SearchResult'
 import HomeScreen from '../screens/Home'
 import SearchResultsTabNavigator from './SearchResultsTabNavigator'
 import MapScreen from '../screens/Map'
+import AccommodationScreen from "../screens/AccommodationScreen";
 
 const Stack = createStackNavigator()
 
@@ -12,7 +13,7 @@ const Router = () => {
         <Stack.Navigator>
             <Stack.Screen
                 name={"Home"}
-                component={MapScreen}
+                component={HomeScreen}
                 options={{
                     headerShown: false
                 }}
@@ -20,6 +21,10 @@ const Router = () => {
             <Stack.Screen
                 name={"SearchResult"}
                 component={SearchResultsTabNavigator}
+            />
+            <Stack.Screen
+                name={"Accommodation Details"}
+                component={AccommodationScreen}
             />
         </Stack.Navigator>
     )

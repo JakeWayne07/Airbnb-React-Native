@@ -1,20 +1,13 @@
 import React from 'react'
-import { View, Text, Image,Pressable } from 'react-native'
+import { View, Text, Image, ScrollView } from 'react-native'
 import styles from './styles.js'
-import { useNavigation } from '@react-navigation/native'
 
-const Accommodation = (props) => {
+const AccommodationDetails = (props) => {
 
     const post = props.post
-    const navigator = useNavigation()
 
     return (
-        <Pressable 
-            style={styles.container}
-            onPress={() => {
-                navigator.navigate("Accommodation Details", {postId : post.id})
-            }}
-        >
+        <ScrollView style={styles.container}>
             {/* Image */}
             <Image
                 source={{uri: post.image}}
@@ -35,8 +28,12 @@ const Accommodation = (props) => {
             </Text>
             {/* Total Price  */}
             <Text style={styles.totalPrice}>${post.totalPrice} total</Text>
-        </Pressable>
+
+            <Text style={styles.longDescription}>
+                {post.longDescription}
+            </Text>
+        </ScrollView>
     )
 }
 
-export default Accommodation
+export default AccommodationDetails;
