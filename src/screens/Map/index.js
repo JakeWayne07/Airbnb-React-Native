@@ -6,6 +6,13 @@ import CustomMarker from "../../components/CustomMarker";
 import places from '../../assets/data/feed';
 import CarouselItem from '../../components/CarouselItem';
 
+const defaultRegion = {
+    latitude: 28.2723,
+    longitude: -16.6425,
+    latitudeDelta: 0.8,
+    longitudeDelta: 0.8,
+}
+
 const MapScreen = () => {
 
     const [selectedPlaceId, setSelectedPlaceId] = useState(null)
@@ -48,12 +55,7 @@ const MapScreen = () => {
                 ref={map}
                 provider={PROVIDER_GOOGLE} // remove if not using Google Maps
                 style={styles.map}
-                region={{
-                    latitude: 28.2723,
-                    longitude: -16.6425,
-                    latitudeDelta: 0.8,
-                    longitudeDelta: 0.8,
-                }}
+                region={defaultRegion}
             >
                 {places.map(place =>(
                             <CustomMarker
