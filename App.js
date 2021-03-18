@@ -20,6 +20,8 @@ import DestinationSearchScreen from './src/screens/DestinationSearch'
 import GuestScreen from './src/screens/Guests'
 import Router from './src/navigation/Router'
 
+import { withAuthenticator } from 'aws-amplify-react-native'
+
 const post1 = feed[0]
 
 const App: () => React$Node = () => {
@@ -31,4 +33,4 @@ const App: () => React$Node = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);
