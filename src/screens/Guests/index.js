@@ -105,7 +105,10 @@ const GuestScreen = () => {
                     navigation.navigate('Home', {
                         screen: 'Explorer',
                         params: {
-                            screen: 'SearchResult'
+                            screen: 'SearchResult',
+                            params: {
+                                guests: adults + children + infants
+                            }
                         }
                     })
                 } 

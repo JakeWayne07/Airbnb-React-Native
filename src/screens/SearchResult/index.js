@@ -6,13 +6,20 @@ import feed from '../../assets/data/feed'
 import Accommodation from '../../components/Accommodation'
 import {listPosts} from '../../graphql/queries'
 
-const SearchResultScreen = () => {
+const SearchResultScreen = (props) => {
 
+    const {guests} = props
     const [post, setPost] = useState([])
 
     const fetchPosts = async () =>{
         const posts = await API.graphql(
-            graphqlOperation(listPosts)
+            graphqlOperation(listPosts, {
+                filter:{
+                    maxGuests: {
+                        ge: guests
+                    }
+                }
+            })
         )
         return posts
     }

@@ -16,13 +16,20 @@ const defaultRegion = {
     longitudeDelta: 0.8,
 }
 
-const MapScreen = () => {
+const MapScreen = (props) => {
 
+    const {guests} = props
     const [posts, setPosts] = useState([])
 
     const fetchPosts = async () =>{
         const posts = await API.graphql(
-            graphqlOperation(listPosts)
+            graphqlOperation(listPosts, {
+                filter:{
+                    maxGuests: {
+                        ge: guests
+                    }
+                }
+            })
         )
         return posts
     }
